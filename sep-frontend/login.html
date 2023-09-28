@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEP officialth</title>
+<meta name="description" content="SEPofficialth">
+<meta name="keywords" content="">
+<meta name="copyright" content="">
+
+<!-- CSS Files -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.3.0/jquery.bootstrap-touchspin.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+<div class="wrappermain ">
+   <div class="transparent-cat"></div>
+
+   <nav class="boxmenu">
+      <div class="top-close">
+         <img src="images/close.png">
+      </div>
+      <ul class="main-menu-mobile">
+         <li>
+            <a href="#">Home</a>
+         </li>
+         
+         <li class="have-sub">
+            <a> 
+               Products
+            </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">All Products</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Denims</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Outerwear</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Woven</a></li>
+               </ul>
+            </div>
+         </li>
+         
+         <li class="have-sub">
+            <a> Collections </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">Rulebreakers</a></li>
+                  <li><a href="#">My Happiness on the concrete</a></li>
+
+               </ul>
+            </div>
+         </li>
+         <li>
+            <a href="#">About</a>
+         </li>
+         <li>
+            <a href="#">Contact</a>
+         </li>
+         <li>
+            <a href="#">Customer Request</a>
+         </li>
+         <li>
+            <a href="#">Account</a>
+         </li>
+         
+      </ul>
+
+      <button class="logout">Logout <i><img src="images/logout.png" width="16"></i></button>
+   </nav>
+
+   <nav class="boxcart">
+      <header class="title-boxcart">
+         <h2 class="title-cart mb-0">CART (2 ITEMS)</h2>
+         <div class="top-close">
+            <img src="images/close.png">
+         </div>
+      </header>
+
+      <div class="boxcart-inner">
+         <ul class="listing-cart">
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-01.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">Pillen Flower T-shirt</h2>
+                  <div class="price-cart">1,090.00 THB</div>
+                  <div class="sku">SKU : 455  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-02.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">BFIG sweater</h2>
+                  <div class="price-cart">1,890.00 THB</div>
+                  <div class="sku">SKU : 451  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+         </ul>
+      </div>
+      
+      <div class="box-total">
+         <div class="flex-total mb-3">
+            <span>Total</span>
+            <span>2,980.00 THB</span>
+         </div>
+
+         <button class="btn-detail mb-3">CHECKOUT</button>
+         <button class="btn-detail btn-line">CONTINUE SHOPPING</button>
+      </div>
+   </nav>
+
+   <header class="header ">
+      <div class="container">
+         <button id="wsnavtoggle" class="wsanimated-arrow"><span></span></button>
+         
+      
+         <a class="logo"> 
+            <img src="images/logo.svg" class="img-fluid" /> 
+         </a>
+         <form class="form-search form-main">
+            <button type="button"><img src="images/search.svg"></button>
+            <input type="search" class="form-control" placeholder="SEARCH">
+         </form>
+
+         <div class="header-right">
+            <a class="sub-profile" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i><img src="images/flag-th.svg" class="me-2"></i> 
+               <span class="font-bold">THB</span> 
+               <i class="fa fa-angle-down"></i>
+            </a>
+
+            <ul class="dropdown-menu  dropdown-menu-end">
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flag-th.svg"></i> THB
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flags-en.svg"></i> USD
+                  </a>
+               </li>
+               
+            </ul>
+
+
+            <button class="icon-cart" id="icon-cart">
+               <img src="images/shopping-bag.svg">
+            </button>
+         </div>
+      </div>
+      
+   </header>
+
+   <main class="main main-login main-pd">
+      <div class="container container-login">
+         
+         <form class="formrequrire form-main form-login" id="form-valid" autocomplete="off" novalidate="novalidate">
+            <div class="control-wrapper color-red" id="errors-container"></div>
+            <h2 class="text-center size-30 mb-48">LOG IN</h2>
+            <fieldset class="form-group">
+               <label>EMAIL*</label>
+               <input autocomplete="off" type="email" class="form-control" placeholder="Enter Email" id="login-email">
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>PASSWORD*</label>
+               <div class="position-relative">
+                  <input autocomplete="off" type="password" class="form-control inputPassword login-password" placeholder="Enter Password" id="login-password">
+                  <i class="bi bi-eye-fill g-pass"></i>
+               </div>
+            </fieldset>
+
+            <aside class="forgot-pass"><a href="forget-password.html">FORGET PASSWORD?</a></aside>
+            <button type="submit" class="btn-detail">LOG IN</button>
+            <aside class="register-sec text-center">
+               NO ACCOUNT YET? <a href="register.html" class="ms-2">REGISTER NOW</a>
+            </aside>
+
+            <div class="or-login"></div>
+
+            <button class="btn-detail btn-with-line">LOG IN WITH LINE</button>
+         </form>
+      </div>   
+   </main>
+
+<!-- end wrappermain -->
+</div>
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap-touchspin.min.js"></script>
+<script type="text/javascript" src="js/just-validate.production.min.js"></script>
+<script type="text/javascript" src="js/plugin-slide.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<script>
+
+   // const emailInput = document.getElementById('login-email');
+   // const passwordInput = document.getElementById('login-password');
+   // const errorsContainer = document.getElementById('errors-container'); 
+   // emailInput.addEventListener("keyup", validateLogin);
+   // passwordInput.addEventListener("keyup", validateLogin);
+
+   // function validateLogin(){
+   //    let emailValet = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+   //    if(emailInput.value == '' || passwordInput.value == ''){
+   //       errorsContainer.innerText = 'Incorrect email address or password. Please try again';
+   //    }
+      
+      
+   // }
+
+   const validator = new JustValidate('#form-valid', {
+      errorsContainer: '#errors-container',
+   });
+   
+   validator
+      .addField('#login-email', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'Incorrect email address or password. Please try again.',
+            },
+            {
+               rule: 'email',
+            }
+         ],
+      )
+      .addField('#login-password', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'Incorrect email address or password. Please try again.',
+               errorLabelCssClass: ['invalid-password'],
+            }
+         ],
+      )
+      
+      
+</script>
+
+</body>
+</html>

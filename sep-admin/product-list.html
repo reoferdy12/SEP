@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SEP</title>
+   <meta name=”robots” content=”noindex,nofollow” />
+   <!--<meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="copyright" content=""> -->
+
+   <!-- CSS Files -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+<!-- wrappermain -->
+
+<header class="header">
+   <div class="header-top container-flex">
+      <div class="logo">
+      	<img src="images/logo.svg">
+      </div>
+
+      <aside class="right-header">
+         <!-- add class has-alert เมื่อมีการแจ้งเตือน -->
+         <button class="alert-icon has-alert" onclick="window.location.href='order-activity.html'"> 
+            <i class="bi bi-bell-fill"></i>
+            <span class="alert-new"></span>
+         </button>
+         <div class="user-top">
+            Thananith Thanajiraphonmeth
+         </div>
+         <button class="logout-top" onclick="window.location.href='index.html'">
+            Logout <i class="ms-2"><img src="images/logout.png" width="18"></i>
+         </button>
+         	
+      </aside>
+   </div>
+</header>
+
+<main class="main d-flex" id="main">
+   <!--  -->
+   <nav class="sidebarnav">
+      <ul class="sidebarnav-list" id="accordionSidebar">
+         
+         <li>
+            <a href="home.html">Home</a>
+         </li>
+
+         <li class="havesub">
+            <h2 class="active">Product Management <i class="fa fa-angle-down"></i></h2>
+            <div class="submenu" style="display: block;">
+               <ul>
+                  <li>
+                     <a class="active" href="product-list.html">Product</a>
+                  </li>
+                  <li>
+                     <a href="category.html">Category</a>
+                  </li>
+                  <li>
+                     <a href="collection.html">Collection</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+
+         <li>
+            <a href="customer-management.html">Customer Management</a>
+         </li>
+
+         <li>
+            <a href="content-management.html">Content Management</a>
+         </li>
+
+         <li>
+            <a href="user-management.html">User Management</a>
+         </li>
+
+         <li>
+            <a href="promotion.html">Promotion</a>
+         </li>
+
+         <li>
+            <a href="shipping-delivery.html">Shipping and Delivery</a>
+         </li>
+
+         <li>
+            <a href="currency-management.html">Currency Management</a>
+         </li>
+      </ul>
+   </nav>
+
+   <!-- content right -->
+   <div id="content-wrapper">
+      <article class="content-detail">
+         <!-- breadcrumb-->
+         <nav class="breadcrumb-list size-18 font-med" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a>Product Management</a></li>
+               <li class="breadcrumb-item active" aria-current="page">Product</li>
+            </ol>
+         </nav>
+         <!-- box content -->
+         <div class="box-main">
+            <h2 class="font-med size-default mb-3">Search</h2>
+
+            <form class="form-main needs-validation" novalidate autocomplete="off" enctype="multipart/form-data">
+               <div class="row gx-3 gy-2">
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Code</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Code" type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Product Name</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Product Name" type="text" class="form-control">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Category</label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option value="0" selected hidden>Choose Category</option>
+                           <option>Category 01</option>
+                           <option>Category 02</option>
+                           <option>Category 03</option>
+                       </select>
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Collection</label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option value="0" selected hidden>Choose Collection</option>
+                           <option>Collection 01</option>
+                           <option>Collection 02</option>
+                           <option>Collection 03</option>
+                       </select>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="col-6">
+                     <div class="row gx-3">
+                        <div class="form-group col-6">
+                           <label>Price</label>
+                           <div class="position-relative inner-price">
+                              <input placeholder="0-100,000 THB"  type="text" class="form-control" data-type='currency' min="0" max="100000">
+                              <div class="thb">THB</div>
+                           </div>
+                        </div>
+                        <div class="form-group col-6">
+                           <label>To</label>
+                            <div class="position-relative inner-price">
+                              <input placeholder="0-100,000 THB" type="text" class="form-control" data-type='currency' min="0" max="100000">
+                              <div class="thb">THB</div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+                  <div class="col-6">
+                     <div class="row gx-3">
+                        <div class="form-group col-6">
+                           <label>Cost From</label>
+                           <div class="position-relative inner-price">
+                              <input placeholder="0-100,000 THB"  type="text" class="form-control" data-type='currency' min="0" max="100000">
+                              <div class="thb">THB</div>
+                           </div>
+                        </div>
+                        <div class="form-group col-6">
+                           <label>To</label>
+                            <div class="position-relative inner-price">
+                              <input placeholder="0-100,000 THB" type="text" class="form-control" data-type='currency' min="0" max="100000">
+                              <div class="thb">THB</div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Status </label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option value="0" selected hidden>Choose Status</option>
+                           <option>Active</option>
+                           <option>Inactive</option>
+                       </select>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="row gx-3">
+                        <div class="form-group col-6">
+                           <label>Modified Date From</label>
+                           <div class="position-relative">
+                              <input placeholder="DD/MM/YYYY"  type="text" class="form-control txtcalendarin date-calendar" readonly>
+                           </div>
+                        </div>
+                        <div class="form-group col-6">
+                           <label>To</label>
+                            <div class="position-relative">
+                              <input placeholder="DD/MM/YYYY" type="text" class="form-control txtcalendarout date-calendar" readonly>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Modified By</label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option value="0" selected hidden>Choose User</option>
+                           <option>Thananith Thanajiraphonmeth</option>
+                           <option>Sirikorn Kulachol</option>
+                       </select>
+                     </div>
+                  </div>
+               </div>
+               <aside class="flex-button mt-4">
+                  <button type="submit" class="btn-detail me-2">Search</button>
+                  <button type="reset" class="btn-detail btn-line">Clear</button>
+               </aside>
+            </form>
+         </div>
+
+         <aside class="mt-4 mb-4 d-flex">
+            <a href="create-product.html" class="btn-detail me-2">Create</a>
+            <a href="size-guide.html" class="btn-detail btn-line">Size Guide</a>
+         </aside>
+
+         <div class="wrap-table-main table-responsive">
+            <table class="table table-borderless text-center table-main">
+               <thead>
+                  <tr>
+                     <th></th>
+                     <th>Code</th>
+                     <th>Product Name</th>
+                     <th>Category</th>
+                     <th>Collection</th>
+                     <th>Price</th>
+                     <th>Cost</th>
+                     <th>Status</th>
+                     <th>Modified Date</th>
+                     <th>Modified By</th>
+                     <th></th>
+                  </tr>
+               </thead>
+
+               <tbody>
+                  <tr>
+                     <td>
+                        <img src="images/product-list-01.jpg" class="product-table">
+                     </td>
+                     <td>451</td>
+                     <td><a href="product-detail.html">Blue Dream Pants</a></td>
+                     <td>Denim</td>
+                     <td>My happiness on the concrete</td>
+                     <td>4,290.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-02.jpg" class="product-table">
+                     </td>
+                     <td>452</td>
+                     <td><a href="product-detail.html">Art Of Liberty (v.2)</a></td>
+                     <td>Woven</td>
+                     <td>My happiness on the concrete</td>
+                     <td>3,590.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-03.jpg" class="product-table">
+                     </td>
+                     <td>453</td>
+                     <td><a href="product-detail.html">Blue Dream Shorts</a></td>
+                     <td>Shirts</td>
+                     <td>Rulebreakers</td>
+                     <td>2,790.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+                  
+                  <tr>
+                     <td>
+                        <img src="images/product-list-04.jpg" class="product-table">
+                     </td>
+                     <td>454</td>
+                     <td><a href="product-detail.html">All Black Paisley</a></td>
+                     <td>Hoodies</td>
+                     <td>Rulebreakers</td>
+                     <td>4,290.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-05.jpg" class="product-table">
+                     </td>
+                     <td>455</td>
+                     <td><a href="product-detail.html">Shorts All Black Paisley</a></td>
+                     <td>Outerwear</td>
+                     <td>Rulebreakers</td>
+                     <td>2,290.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-06.jpg" class="product-table">
+                     </td>
+                     <td>456</td>
+                     <td><a href="product-detail.html">Classi c Straight-Fit Light Blue</a></td>
+                     <td>Lingerie & Lounge</td>
+                     <td>My happiness on the concrete</td>
+                     <td>2,290.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-07.jpg" class="product-table">
+                     </td>
+                     <td>457</td>
+                     <td><a href="product-detail.html">Classic Straight-Fit Blue</a></td>
+                     <td>Swimwear</td>
+                     <td>My happiness on the concrete</td>
+                     <td>2,290.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-08.jpg" class="product-table">
+                     </td>
+                     <td>458</td>
+                     <td><a href="product-detail.html">Black Track</a></td>
+                     <td>Shoes</td>
+                     <td>My happiness on the concrete</td>
+                     <td>3,590.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-09.jpg" class="product-table">
+                     </td>
+                     <td>459</td>
+                     <td><a href="product-detail.html">Blue Track</a></td>
+                     <td>Dresses</td>
+                     <td>Rulebreakers</td>
+                     <td>3,590.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <img src="images/product-list-10.jpg" class="product-table">
+                     </td>
+                     <td>460</td>
+                     <td><a href="product-detail.html">LAZY BOY</a></td>
+                     <td>Beauty</td>
+                     <td>My happiness on the concrete</td>
+                     <td>3,590.00 ฿</td>
+                     <td>1,000.00 ฿</td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>Thananith Thanajiraphonmeth</td>
+                     <td width="5%"><a href="#"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+         <aside class="select-page mt-4 mb-4">
+            ทั้งหมด : 15 รายการ
+            <button class="me-2 ms-3"><i class="bi bi-chevron-left"></i></button>
+            หน้า
+            <select class="select-option-page">
+               <option>1</option>
+               <option>12</option>
+            </select>
+            จาก 2
+            <button class="ms-2"><i class="bi bi-chevron-right"></i></button>
+         </aside>
+
+
+      </article>
+   </div>
+
+</main>
+<!-- /Main -->
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js
+"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+</body>
+</html>

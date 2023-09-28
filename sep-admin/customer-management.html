@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SEP</title>
+   <meta name=”robots” content=”noindex,nofollow” />
+   <!--<meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="copyright" content=""> -->
+
+   <!-- CSS Files -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+<!-- wrappermain -->
+
+<header class="header">
+   <div class="header-top container-flex">
+      <div class="logo">
+      	<img src="images/logo.svg">
+      </div>
+
+      <aside class="right-header">
+         <!-- add class has-alert เมื่อมีการแจ้งเตือน -->
+         <button class="alert-icon has-alert" onclick="window.location.href='order-activity.html'"> 
+            <i class="bi bi-bell-fill"></i>
+            <span class="alert-new"></span>
+         </button>
+         <div class="user-top">
+            Thananith Thanajiraphonmeth
+         </div>
+         <button class="logout-top" onclick="window.location.href='index.html'">
+            Logout <i class="ms-2"><img src="images/logout.png" width="18"></i>
+         </button>
+         	
+      </aside>
+   </div>
+</header>
+
+<main class="main d-flex" id="main">
+   <!--  -->
+   <nav class="sidebarnav">
+      <ul class="sidebarnav-list" id="accordionSidebar">
+         
+         <li>
+            <a href="home.html">Home</a>
+         </li>
+
+         <li class="havesub">
+            <h2>Product Management <i class="fa fa-angle-down"></i></h2>
+            <div class="submenu">
+               <ul>
+                  <li>
+                     <a href="product-list.html">Product</a>
+                  </li>
+                  <li>
+                     <a href="category.html">Category</a>
+                  </li>
+                  <li>
+                     <a href="collection.html">Collection</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+
+         <li>
+            <a class="active" href="customer-management.html">Customer Management</a>
+         </li>
+
+         <li>
+            <a href="content-management.html">Content Management</a>
+         </li>
+
+         <li>
+            <a href="user-management.html">User Management</a>
+         </li>
+
+         <li>
+            <a href="promotion.html">Promotion</a>
+         </li>
+
+         <li>
+            <a href="shipping-delivery.html">Shipping and Delivery</a>
+         </li>
+
+         <li>
+            <a href="currency-management.html">Currency Management</a>
+         </li>
+      </ul>
+   </nav>
+
+   <!-- content right -->
+   <div id="content-wrapper">
+      <article class="content-detail">
+         <!-- breadcrumb-->
+         <nav class="breadcrumb-list size-18 font-med" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item active" aria-current="page"><a>Customer Management</a></li>
+            </ol>
+         </nav>
+         <!-- box content -->
+         <div class="box-main">
+            <h2 class="font-med size-default mb-3">Search</h2>
+
+            <form class="form-main needs-validation" novalidate autocomplete="off" enctype="multipart/form-data">
+               <div class="row gx-3 gy-2">
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Name</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Name" type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Surname</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Surname" type="text" class="form-control">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Email</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Email" type="email" class="form-control">
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Phone Number</label>
+                     <div class="position-relative">
+                        <input placeholder="Search Phone Number" type="text" class="form-control" onkeypress="return checkNumber(event)">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Status </label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option value="0" selected hidden>Choose Status</option>
+                           <option>Active</option>
+                           <option>Inactive</option>
+                       </select>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="row gx-3">
+                        <div class="form-group col-6">
+                           <label>Modified Date From</label>
+                           <div class="position-relative">
+                              <input placeholder="DD/MM/YYYY"  type="text" class="form-control txtcalendarin date-calendar" readonly>
+                           </div>
+                        </div>
+                        <div class="form-group col-6">
+                           <label>To</label>
+                            <div class="position-relative">
+                              <input placeholder="DD/MM/YYYY" type="text" class="form-control txtcalendarout date-calendar" readonly>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <aside class="flex-button mt-4">
+                  <button type="submit" class="btn-detail me-2">Search</button>
+                  <button type="reset" class="btn-detail btn-line">Clear</button>
+               </aside>
+            </form>
+         </div>
+
+         <aside class="mt-4 mb-4 d-flex">
+            <a href="create-customer.html" class="btn-detail me-2">Create</a>
+         </aside>
+
+         <div class="wrap-table-main table-responsive">
+            <table class="table table-borderless text-center table-main">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Surname</th>
+                     <th>Email</th>
+                     <th>Phone Number</th>
+                     <th class="text-start">Address</th>
+                     <th>Status</th>
+                     <th>Modif ied Date</th>
+                     <th>Last  Order</th>
+                     <th></th>
+                  </tr>
+               </thead>
+
+               <tbody>
+                  <tr>
+                     <td>Buapun</td>
+                     <td>Kumyai</td>
+                     <td><a href="customer-detail.html">Buapun@gmail.com</a></td>
+                     <td>087-465-2846</td>
+                     <td class="text-start">
+                        <div class="cut-address">1/54 Tha Din Daeng, Phak Hai District, Phra Nakhon Si Ayutthaya 13120</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000001</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Taylor</td>
+                     <td>Swift</td>
+                     <td><a href="customer-detail.html">Taylor@gmail.com</a></td>
+                     <td>067-485-1458</td>
+                     <td class="text-start">
+                        <div class="cut-address">123 Tha Din Daeng, Phak Hai District, Phra Nakhon Si Ayutthaya 13120</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000002</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Dickson</td>
+                     <td>Baker</td>
+                     <td><a href="customer-detail.html">Dickson@gmail.com</a></td>
+                     <td>067-485-1458</td>
+                     <td class="text-start">
+                        <div class="cut-address">45/2 Highway 4052 Nang Lu, Mueang Chai Nat District, Chai Nat 17000</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000003</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Tom</td>
+                     <td>Jerry</td>
+                     <td><a href="customer-detail.html">Tom@gmail.com</a></td>
+                     <td>086-548-2356</td>
+                     <td class="text-start">
+                        <div class="cut-address">Highway 5016, Nong Noi, Wat Sing District, Chai Nat 17120</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+                  
+                  <tr>
+                     <td>Harry</td>
+                     <td>Ford</td>
+                     <td><a href="customer-detail.html">Harry@gmail.com</a></td>
+                     <td>086-548-2356</td>
+                     <td class="text-start">
+                        <div class="cut-address">Phahonyothin Road, Tambon Khao Tha Phra, Mueang Chai Nat District, Chai Nat 17000</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Jane</td>
+                     <td>Yanthip</td>
+                     <td><a href="customer-detail.html">Jane@gmail.com</a></td>
+                     <td>069-589-7457</td>
+                     <td class="text-start">
+                        <div class="cut-address">405 หมู่ที่ 8 Tambon Mueang K ao, Mueang Khon Kaen District, Khon Kaen 40000</div>
+                     </td>
+                     <td>
+                        <div class="tb-status">
+                            Inactive
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Mary</td>
+                     <td>Jane</td>
+                     <td><a href="customer-detail.html">Mary@gmail.com</a></td>
+                     <td>084-584-7895</td>
+                     <td class="text-start">
+                        <div class="cut-address">68 Kho, Kumphawapi District, Udon Thani</div>
+                     </td>
+                     <td>
+                        <div class="tb-status">
+                           Inactive
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Dominic</td>
+                     <td>Toretto</td>
+                     <td><a href="customer-detail.html">Dominic@gmail.com</a></td>
+                     <td>069-874-9846</td>
+                     <td class="text-start">
+                        <div class="cut-address">47 Sam Krathai, Kui Buri District, Prachuap Khiri Khan</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Jack</td>
+                     <td>Ghost</td>
+                     <td><a href="customer-detail.html">Jack@gmail.com</a></td>
+                     <td>082-123-4567</td>
+                     <td class="text-start">
+                        <div class="cut-address">87 Khao Mai Kaeo, Kabin Buri District, Prachin Buri 25110</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>09/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+
+                  <tr>
+                     <td>Somying</td>
+                     <td>JingJai</td>
+                     <td><a href="customer-detail.html">Somying@gmail.com</a></td>
+                     <td>081-243-5125</td>
+                     <td class="text-start">
+                        <div class="cut-address">29/5 หมู่ที่9 Unnamed Road Tambon Nong Rong, Nong Khae District, Saraburi 18140</div>
+                     </td>
+                     <td>
+                        <div class="tb-status active">
+                            Active
+                        </div>
+                     </td>
+                     <td>07/05/2023</td>
+                     <td>SEP0000004</td>
+                     <td width="5%"><a href="edit-customer.html"><img src="images/edit.png" width="16"></a></td>
+                  </tr>
+            </table>
+         </div>
+
+         <aside class="select-page mt-4 mb-4">
+            ทั้งหมด : 15 รายการ
+            <button class="me-2 ms-3"><i class="bi bi-chevron-left"></i></button>
+            หน้า
+            <select class="select-option-page">
+               <option>1</option>
+               <option>12</option>
+            </select>
+            จาก 2
+            <button class="ms-2"><i class="bi bi-chevron-right"></i></button>
+         </aside>
+
+
+      </article>
+   </div>
+
+</main>
+<!-- /Main -->
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js
+"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+.btn-red.btn-detail {
+    color: #fff !important;
+    background: #ae1533;
+}
+.color-red {
+    color: #b72226;
+    fill: #b72226;
+}
+
+body {
+    font-weight: 300;
+}
+
+.btn-has-i {
+    padding: 7px 55px 7px 15px;
+}
+.dropdown-item {
+    font-weight: 300;
+}
+.header .dropdown-menu {
+    top: 0px !important;
+}
+.btn-upload { 
+    background: #ae1533;
+}
+.pad-left{ padding-left:30px!important; }
+
+.datepicker-pr15 {
+    padding-right: 15px!important;
+}
+.box-paper .area-texta {
+    padding: 15px 25px 15px 15px;
+}
+.icon-file{ width:20px; height:20px;}
+
+.fwc-400 {
+    font-weight: 400;
+    color: inherit!important;
+}
+.box-paper .order-input li .oi-inner i {
+    color: #b72226;
+}
+.form-login .btn-detail {
+    background: #b72226!important;
+}
+.form-login .btn-gray {
+    padding: 12px 35px;
+    background: #9e9e9e;
+    color: #fff !important;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 5px;
+    line-height: 1;
+    position: relative;
+
+}
+
+.sec-inner-bot15{ padding: 12px 25px!important;}
+.sec-inner-bot8 {margin-bottom:8px!important;}
+.marg-label{  margin-bottom: 3px; }
+
+.cus-inner-area-upload {
+	padding-left :15px!important;  padding-right: 15px!important;	
+}
+.form-control.fw-420 {
+    width: 420px;
+}
+.cus-area-upload{
+	padding-left:5px!important; padding-right: 5px !important;
+}
+.cus-area-upload .form-control{	
+	font-size:12px!important; 
+}
+.cus-area-upload  .order-input li {
+    padding-left: 7px!important;
+}
+.cus-area-upload  .oi-inner i {
+    right: 2px;
+}
+.btn-review {
+	padding: 5px 8px !important;
+	text-transform : none;
+}
+.wrap-spin-60-cus{
+    margin-left: 50px!important;
+}
+.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.datepicker-dropdown {
+	background-image: none !important;
+	padding: 10px!important;
+}
+
+.btn-next-left {
+	border-radius: 25px 0px 0px 25px;
+	padding: 5px 10px;
+	background: #e1e1e1;
+	border-radius: 20px 0px 0px 20px;
+	margin-right: 8px;
+}
+.btn-next-right {
+	padding: 5px 20px;
+	background: #e1e1e1;
+	border-radius: 0px 20px 20px 0px;
+	margin-right: 8px;
+}

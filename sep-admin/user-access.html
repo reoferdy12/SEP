@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SEP</title>
+   <meta name=”robots” content=”noindex,nofollow” />
+   <!--<meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="copyright" content=""> -->
+
+   <!-- CSS Files -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+<!-- wrappermain -->
+
+<header class="header">
+   <div class="header-top container-flex">
+      <div class="logo">
+      	<img src="images/logo.svg">
+      </div>
+
+      <aside class="right-header">
+         <!-- add class has-alert เมื่อมีการแจ้งเตือน -->
+         <button class="alert-icon has-alert" onclick="window.location.href='order-activity.html'"> 
+            <i class="bi bi-bell-fill"></i>
+            <span class="alert-new"></span>
+         </button>
+         <div class="user-top">
+            Thananith Thanajiraphonmeth
+         </div>
+         <button class="logout-top" onclick="window.location.href='index.html'">
+            Logout <i class="ms-2"><img src="images/logout.png" width="18"></i>
+         </button>
+         	
+      </aside>
+   </div>
+</header>
+
+<main class="main d-flex" id="main">
+   <!--  -->
+   <nav class="sidebarnav">
+      <ul class="sidebarnav-list" id="accordionSidebar">
+         
+         <li>
+            <a href="home.html">Home</a>
+         </li>
+
+         <li class="havesub">
+            <h2>Product Management <i class="fa fa-angle-down"></i></h2>
+            <div class="submenu">
+               <ul>
+                  <li>
+                     <a  href="product-list.html">Product</a>
+                  </li>
+                  <li>
+                     <a href="category.html">Category</a>
+                  </li>
+                  <li>
+                     <a href="collection.html">Collection</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+
+         <li>
+            <a  href="customer-management.html">Customer Management</a>
+         </li>
+
+         <li>
+            <a href="content-management.html">Content Management</a>
+         </li>
+
+         <li>
+            <a class="active"  href="user-management.html">User Management</a>
+         </li>
+
+         <li>
+            <a href="promotion.html">Promotion</a>
+         </li>
+
+         <li>
+            <a href="shipping-delivery.html">Shipping and Delivery</a>
+         </li>
+
+         <li>
+            <a href="currency-management.html">Currency Management</a>
+         </li>
+      </ul>
+   </nav>
+
+   <!-- content right -->
+   <div id="content-wrapper">
+      <article class="content-detail">
+         <!-- breadcrumb-->
+         <nav class="breadcrumb-list size-18 font-med" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a href="user-management.html">User Management</a></li>
+               <li class="breadcrumb-item active" aria-current="page">User Access</li>
+            </ol>
+         </nav>
+         <!-- box content -->
+         <div class="box-main">
+            <form class="form-main">
+               <div class="row-access row">
+                  <div class="col-4">
+                     <div class="row-access-box" style="min-height: 288px;">
+                        <h2 class="text-center font-med size-16">Role</h2>
+                        <ul class="access-check">
+                           <li>
+                              <div onclick="roleSelected('owner')" class="access-tab active ps-5">Owner</div>
+                           </li>
+                           <li>
+                              <div onclick="roleSelected('admin')" class="access-tab ps-5">Admin</div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="col-4">
+                     <div class="row-access-box" style="min-height: 288px;">
+                        <h2 class="text-center font-med size-16">Access Rights</h2>
+                        <ul class="access-check">
+                           <li>
+                              <div class="access-tab active">
+                                 <div class="form-check">
+                                    <input onchange="checkAccessdt()" class="form-check-input accessRightCB" type="checkbox" id="productManagement" checked>
+                                    <label class="form-check-label mb-0" for="productManagement">
+                                       Product Management
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="cusomerManagement" checked>
+                                    <label class="form-check-label mb-0" for="productManagement">
+                                       Customer Management
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="contentManagement" checked>
+                                    <label class="form-check-label mb-0" for="contentManagement">
+                                       Content Management
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="userManagement" checked>
+                                    <label class="form-check-label mb-0" for="userManagement">
+                                       User Management
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="promotion" checked>
+                                    <label class="form-check-label mb-0" for="promotion">
+                                       Promotion
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="shippingDelivery" checked>
+                                    <label class="form-check-label mb-0" for="shippingDelivery">
+                                       Shipping and Delivery
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab">
+                                 <div class="form-check">
+                                    <input class="form-check-input accessRightCB" type="checkbox" id="currencyManagement" checked>
+                                    <label class="form-check-label mb-0" for="currencyManagement">
+                                       Currency Management
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="col-4">
+                     <div class="row-access-box">
+                        <h2 class="text-center font-med size-16">Access Details</h2>
+                        <ul class="access-check">
+                           <li>
+                              <div class="access-tab not-tab">
+                                 <div class="form-check">
+                                    <input onchange="operationChanged(1)" class="form-check-input accDetailCB" type="checkbox" id="accessd-01" checked>
+                                    <label class="form-check-label mb-0" for="accessd-01">
+                                       See Details
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab not-tab">
+                                 <div class="form-check">
+                                    <input onchange="operationChanged(2)" class="form-check-input accDetailCB" type="checkbox" id="accessd-02" checked>
+                                    <label class="form-check-label mb-0" for="accessd-02">
+                                       Edit
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab not-tab">
+                                 <div class="form-check">
+                                    <input onchange="operationChanged(3)" class="form-check-input accDetailCB" type="checkbox" id="accessd-03" >
+                                    <label class="form-check-label mb-0" for="accessd-03">
+                                       Create
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="access-tab not-tab">
+                                 <div class="form-check">
+                                    <input onchange="operationChanged(4)" class="form-check-input accDetailCB" type="checkbox" id="accessd-04" checked>
+                                    <label class="form-check-label mb-0" for="accessd-04">
+                                       Delete
+                                    </label>
+                                  </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+
+               <aside class="flex-button mt-5">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#complete" class="btn-detail me-2">Save</button>
+                  <a  href="user-management.html" class="btn-detail btn-line">Cancel</a>
+               </aside>
+            </form>
+         </div>
+
+
+      </article>
+   </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="complete" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content modal-delete text-center" style="max-width: 500px;">
+            <i class="mb-3"><img src="images/complete.png"></i>
+            <h2 class="font-med size-18 mb-2 mt-3 text-black">Completed</h2>
+
+            <aside class="mt-3 flex-button">
+               <button type="button" class="btn-detail" data-bs-dismiss="modal">OK</button>
+            </aside>
+         </div>
+      </div>
+   </div>
+
+</main>
+<!-- /Main -->
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js
+"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<script>
+   function checkAccessdt()
+   {
+      var rightCM = $('#productManagement');
+      var detailCM1 = $('#accessd-01');
+      var detailCM2 = $('#accessd-02');
+      var detailCM3 = $('#accessd-03');
+      var detailCM4 = $('#accessd-04');
+
+      if(rightCM.is(':checked')){
+         detailCM1.prop('checked', true);
+         detailCM2.prop('checked', false);
+         detailCM3.prop('checked', false);
+         detailCM4.prop('checked', false);
+      }
+      else{
+         detailCM1.prop('checked', false);
+         detailCM2.prop('checked', false);
+         detailCM3.prop('checked', false);
+         detailCM4.prop('checked', false);
+      }
+   }
+
+
+   function operationChanged(input)
+   {
+      var rightCM = $('#productManagement');
+      var detailCM1 = $('#accessd-01');
+      var detailCM2 = $('#accessd-02');
+      var detailCM3 = $('#accessd-03');
+      var detailCM4 = $('#accessd-04');
+
+      if(input === 1){
+         if(detailCM1.is(':checked')){
+            rightCM.prop('checked', true);
+         }
+         else {
+            rightCM.prop('checked', false);
+            detailCM2.prop('checked', false);
+            detailCM3.prop('checked', false);
+            detailCM4.prop('checked', false);
+         }
+      }
+      else{
+         if(detailCM1.is(':checked') || detailCM2.is(':checked') || detailCM3.is(':checked') || detailCM4.is(':checked')){
+            rightCM.prop('checked', true);
+            detailCM1.prop('checked', true);
+         }
+         else{
+            rightCM.prop('checked', false);
+            detailCM2.prop('checked', false);
+            detailCM3.prop('checked', false);
+            detailCM4.prop('checked', false);
+         }
+      }
+   }
+
+   function roleSelected(role)
+   {
+      if(role === 'owner'){
+         //owner -- select all
+         $('.accDetailCB').prop('checked', true);
+         $('.accessRightCB').prop('checked', true);
+
+         //admin -- disabled all
+         $('.accDetailCB').prop('disabled', true);
+         $('.accessRightCB').prop('disabled', true);
+      }
+      else if(role==='admin'){
+         //admin -- enabled all
+         $('.accDetailCB').prop('disabled', false);
+         $('.accessRightCB').prop('disabled', false);
+      }
+   }
+   $(function () {
+      roleSelected('owner');
+   });
+
+</script>
+
+</body>
+</html>

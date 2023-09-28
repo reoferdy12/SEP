@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Prompt&display=swap);
+
+
+
+.test-whileloop{
+  list-style: none;
+  font-family: 'Prompt', sans-serif;
+  padding-left: 0;
+}
+
+.test-whileloop .inner-list{
+  padding: 15px;
+  
+  color: #fff;
+  border:1px solid #fff;
+}
+
+.test-whileloop p{
+  margin-bottom: 0;
+}
+.test-whileloop:not(.box-product) li{
+  padding: 15px;
+  margin-bottom: 2px;
+}
+.test-whileloop li:nth-child(odd){
+  background-color: #000;
+}
+.test-whileloop li:nth-child(even){
+  background-color: #313131;
+}
+
+
+
+.test-whileloop.box-product li{
+  background: none;
+  margin-bottom: 2px;
+}
+
+.test-whileloop.box-product .inner-list{
+  background: #000;
+}

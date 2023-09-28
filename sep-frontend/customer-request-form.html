@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEP officialth</title>
+<meta name="description" content="SEPofficialth">
+<meta name="keywords" content="">
+<meta name="copyright" content="">
+
+<!-- CSS Files -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.3.0/jquery.bootstrap-touchspin.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+<div class="wrappermain ">
+   <div class="transparent-cat"></div>
+
+   <nav class="boxmenu">
+      <div class="top-close">
+         <img src="images/close.png">
+      </div>
+      <ul class="main-menu-mobile">
+         <li>
+            <a href="#">Home</a>
+         </li>
+         
+         <li class="have-sub">
+            <a> 
+               Products
+            </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">All Products</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Denims</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Outerwear</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Woven</a></li>
+               </ul>
+            </div>
+         </li>
+         
+         <li class="have-sub">
+            <a> Collections </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">Rulebreakers</a></li>
+                  <li><a href="#">My Happiness on the concrete</a></li>
+
+               </ul>
+            </div>
+         </li>
+         <li>
+            <a href="#">About</a>
+         </li>
+         <li>
+            <a href="#">Contact</a>
+         </li>
+         <li>
+            <a href="#">Customer Request</a>
+         </li>
+         <li>
+            <a href="#">Account</a>
+         </li>
+         
+      </ul>
+
+      <button class="logout">Logout <i><img src="images/logout.png" width="16"></i></button>
+   </nav>
+
+   <nav class="boxcart">
+      <header class="title-boxcart">
+         <h2 class="title-cart mb-0">CART (2 ITEMS)</h2>
+         <div class="top-close">
+            <img src="images/close.png">
+         </div>
+      </header>
+
+      <div class="boxcart-inner">
+         <ul class="listing-cart">
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-01.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">Pillen Flower T-shirt</h2>
+                  <div class="price-cart">1,090.00 THB</div>
+                  <div class="sku">SKU : 455  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-02.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">BFIG sweater</h2>
+                  <div class="price-cart">1,890.00 THB</div>
+                  <div class="sku">SKU : 451  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+         </ul>
+      </div>
+      
+      <div class="box-total">
+         <div class="flex-total mb-3">
+            <span>Total</span>
+            <span>2,980.00 THB</span>
+         </div>
+
+         <button class="btn-detail mb-3">CHECKOUT</button>
+         <button class="btn-detail btn-line">CONTINUE SHOPPING</button>
+      </div>
+   </nav>
+
+   <header class="header ">
+      <div class="container">
+         <button id="wsnavtoggle" class="wsanimated-arrow"><span></span></button>
+      
+         <a class="logo"> 
+            <img src="images/logo.svg" class="img-fluid" /> 
+         </a>
+         <form class="form-search form-main">
+            <button type="button"><img src="images/search.svg"></button>
+            <input type="search" class="form-control" placeholder="SEARCH">
+         </form>
+
+         <div class="header-right">
+            <a class="sub-profile" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i><img src="images/flag-th.svg" class="me-2"></i> 
+               <span class="font-bold">THB</span> 
+               <i class="fa fa-angle-down"></i>
+            </a>
+
+            <ul class="dropdown-menu  dropdown-menu-end">
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flag-th.svg"></i> THB
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flag-en.svg"></i> USD
+                  </a>
+               </li>
+               
+            </ul>
+
+
+            <button class="icon-cart" id="icon-cart">
+               <img src="images/shopping-bag.svg">
+            </button>
+         </div>
+      </div>
+      
+   </header>
+
+   <main class="main main-pd main-forgetpass">
+      
+      <div class="container container-1600 container-visible ">
+         <a href="login.html" class="back mt-0 mb-4"><i><img src="images/arrow-back.png"></i>Back</a>
+         <form class="formrequrire form-main form-login form-customer" id="form-valid" autocomplete="off" novalidate="novalidate">
+            <div class="control-wrapper color-green">
+               Customer Request Submission Successful! <br class="d-none d-lg-block">
+                Customer Request Code RF000001.
+               </div>
+            <h2 class="text-center size-30">CUSTOMER REQUEST FORM</h2>
+            <ul style="font-size: 12px;" class="text-uppercase color-gray mb-45 has-list">
+               <li>Products can be sent to change sizes. within 3 days after receiving it.</li>
+               <li>Product repair service has to wait for delivery about 3-5 days.</li>
+            </ul>
+            
+            <fieldset class="form-group">
+               <label>REQUEST BY*</label>
+               <input type="text" class="form-control disabled" placeholder="Enter Email" id="request-by" value="Thananith Thanajiraphonmeth" disabled>
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>BIRTHDAY*</label>
+               <input type="text" name="now-dates" class="form-control disabled date-picker" placeholder="DD/MM/YYYY" id="birthday" readonly disabled>
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>ORDER NUMBER*</label>
+               <input type="text" class="form-control" placeholder="Enter ORDER NUMBER" id="order-number">
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>PHONE NUMBER*</label>
+               <input type="tel" class="form-control" placeholder="Enter Phone Number" id="tel" onkeypress="return checkNumber(event)">
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>TOPIC*</label>
+               <input type="text" class="form-control" placeholder="Enter Topic" id="topic">
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label>DESCRIPTION*</label>
+               <textarea class="form-control" rows="4" placeholder="Enter Description" id="description"></textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+               <label class="mb-4">ATTACHED Files</label>
+
+               <div class="custom-file">
+                  <label class="custom-file-label" for="fileUpload"></label>
+                  <input id="fileUpload" class="custom-file-input" multiple="multiple" type="file">
+                  <div id="image-holder" class="image-holder"></div>
+               </div>
+            </fieldset>
+
+
+            <button type="submit" class="btn-detail">SUBMIT</button>
+            
+         </form>
+         
+      </div>   
+   </main>
+
+<!-- end wrappermain -->
+</div>
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap-touchspin.min.js"></script>
+<script type="text/javascript" src="js/just-validate.production.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/plugin-slide.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<script>
+   $('input[name="now-dates"]').daterangepicker({
+      singleDatePicker: true,
+      autoApply: true,
+      
+      locale: {
+         format: 'DD/MM/YYYY'
+       }
+   });
+   $("#order-number").keypress(function(event){
+        var ew = event.which;
+        if(ew == 32)
+            return true;
+        if(48 <= ew && ew <= 57)
+            return true;
+        if(65 <= ew && ew <= 90)
+            return true;
+        if(97 <= ew && ew <= 122)
+            return true;
+        return false;
+    });
+
+   const validator = new JustValidate('#form-valid', {});
+   
+   validator
+      
+      .addField('#order-number', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'This field is required.',
+            }
+         ],
+      )
+      .addField('#tel', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'This field is required.',
+            }
+         ],
+      )
+      .addField('#topic', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'This field is required.',
+            }
+         ],
+      )
+      .addField('#description', 
+         [
+            {
+               rule: 'required',
+               errorMessage: 'This field is required.',
+            }
+         ],
+      )
+
+      
+</script>
+
+</body>
+</html>

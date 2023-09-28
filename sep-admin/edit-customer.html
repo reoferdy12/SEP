@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>SEP</title>
+   <meta name=”robots” content=”noindex,nofollow” />
+   <!--<meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="copyright" content=""> -->
+
+   <!-- CSS Files -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+<!-- wrappermain -->
+
+<header class="header">
+   <div class="header-top container-flex">
+      <div class="logo">
+      	<img src="images/logo.svg">
+      </div>
+
+      <aside class="right-header">
+         <!-- add class has-alert เมื่อมีการแจ้งเตือน -->
+         <button class="alert-icon has-alert" onclick="window.location.href='order-activity.html'"> 
+            <i class="bi bi-bell-fill"></i>
+            <span class="alert-new"></span>
+         </button>
+         <div class="user-top">
+            Thananith Thanajiraphonmeth
+         </div>
+         <button class="logout-top" onclick="window.location.href='index.html'">
+            Logout <i class="ms-2"><img src="images/logout.png" width="18"></i>
+         </button>
+         	
+      </aside>
+   </div>
+</header>
+
+<main class="main d-flex" id="main">
+   <!--  -->
+   <nav class="sidebarnav">
+      <ul class="sidebarnav-list" id="accordionSidebar">
+         
+         <li>
+            <a href="home.html">Home</a>
+         </li>
+
+         <li class="havesub">
+            <h2>Product Management <i class="fa fa-angle-down"></i></h2>
+            <div class="submenu">
+               <ul>
+                  <li>
+                     <a href="product-list.html">Product</a>
+                  </li>
+                  <li>
+                     <a href="category.html">Category</a>
+                  </li>
+                  <li>
+                     <a href="collection.html">Collection</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+
+         <li>
+            <a class="active"  href="customer-management.html">Customer Management</a>
+         </li>
+
+         <li>
+            <a href="content-management.html">Content Management</a>
+         </li>
+
+         <li>
+            <a href="user-management.html">User Management</a>
+         </li>
+
+         <li>
+            <a href="promotion.html">Promotion</a>
+         </li>
+
+         <li>
+            <a href="shipping-delivery.html">Shipping and Delivery</a>
+         </li>
+
+         <li>
+            <a href="currency-management.html">Currency Management</a>
+         </li>
+      </ul>
+   </nav>
+
+   <!-- content right -->
+   <div id="content-wrapper">
+      <article class="content-detail">
+         <!-- breadcrumb-->
+         <nav class="breadcrumb-list size-18 font-med" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+               <li class="breadcrumb-item"><a>Customer Management</a></li>
+               <li class="breadcrumb-item active" aria-current="page">Edit Customer</li>
+            </ol>
+         </nav>
+         <form class="form-main needs-validation" novalidate autocomplete="off">
+         <!-- box content -->
+            <div class="box-main">
+               <h2 class="font-med size-default mb-3">Edit Customer</h2>
+               <div class="row gx-3 gy-2">
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Modified Date</label>
+                     <div class="position-relative">
+                        <input name="now-dates" type="text" class="form-control" disabled>
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Status </label>
+                     <div class="position-relative">
+                        <select class="form-select not-validate">
+                           <option selected>Active</option>
+                           <option>Inactive</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group">
+                     <div class="w-50 pe-2">
+                        <label>Email</label>
+                        <div class="position-relative">
+                           <input placeholder="Enter Email" type="email" class="form-control" value="First@gmail.com">
+                        </div>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Name</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Name" type="text" class="form-control" value="First">
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Surname</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Surname" type="text" class="form-control" value="Jirajet">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Birthday</label>
+                        <div class="position-relative">
+                        <input placeholder="DD/MM/YYYY" type="text" class="form-control" name="now-dates" value="16/12/1998" readonly >
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Phone Number</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Phone Number" type="text" class="form-control" onkeypress="return checkNumber(event)" value="084-569-3257">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group col-6">
+                     <label>Rank</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Surname" type="text" class="form-control" value="Silver" disabled>
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Total Spent</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Surname" type="text" class="form-control" value="0.00" disabled>
+                     </div>
+                  </div>
+                  
+                  <!-- row -->
+                  <div class="form-group">
+                     <label>Address</label>
+                     <div class="position-relative">
+                        <textarea class="form-control" rows="3" placeholder="Enter Address">114 Wang Mai Daeng, Prathai District, Nakhon Ratchasima 30180</textarea>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+
+            <div class="box-main mt-3">
+               <h2 class="font-med size-default mb-3">Tax Invoice</h2>
+               <div class="row gx-3 gy-2">
+                 
+                  <div class="form-group col-6">
+                     <label>Taxpayer Identification No.</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Taxpayer Identification No." type="text" class="form-control" onkeypress="return checkNumber(event)" value="1-1524-98486-25-1">
+                     </div>
+                  </div>
+                  <div class="form-group col-6">
+                     <label>Branch</label>
+                     <div class="position-relative">
+                        <input placeholder="Enter Branch" type="text" class="form-control" onkeypress="return checkNumber(event)" maxlength="4" value="0000">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group">
+                     <label>Company Name</label>
+                        <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="Enter Company Name" value="Kala Co.,Ltd.">
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="form-group">
+                     <label>Billing Address</label>
+                     <div class="position-relative">
+                        <textarea class="form-control" rows="3" placeholder="Enter Address">123 Khwaeng Samphanthawong, Samphanthawong, Bangkok 10100</textarea>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+            <aside class="flex-button mt-4">
+               <button type="submit" class="btn-detail me-2">Save</button>
+               <a href="customer-detail.html" class="btn-detail btn-line">Cancel</a>
+            </aside>
+         
+         </form>
+
+
+      </article>
+   </div>
+
+</main>
+<!-- /Main -->
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js
+"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+</body>
+</html>

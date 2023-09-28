@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEP officialth</title>
+<meta name="description" content="SEPofficialth">
+<meta name="keywords" content="">
+<meta name="copyright" content="">
+
+<!-- CSS Files -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.3.0/jquery.bootstrap-touchspin.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+<div class="wrappermain ">
+   <div class="transparent-cat"></div>
+
+   <nav class="boxmenu">
+      <div class="top-close">
+         <img src="images/close.png">
+      </div>
+      <ul class="main-menu-mobile">
+         <li>
+            <a href="#">Home</a>
+         </li>
+         
+         <li class="have-sub">
+            <a> 
+               Products
+            </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">All Products</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Denims</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Outerwear</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Woven</a></li>
+               </ul>
+            </div>
+         </li>
+         
+         <li class="have-sub">
+            <a> Collections </a>
+            <div class="submenu">
+               <ul>
+                  <li><a href="#">Rulebreakers</a></li>
+                  <li><a href="#">My Happiness on the concrete</a></li>
+
+               </ul>
+            </div>
+         </li>
+         <li>
+            <a href="#">About</a>
+         </li>
+         <li>
+            <a href="#">Contact</a>
+         </li>
+         <li>
+            <a href="#">Customer Request</a>
+         </li>
+         <li>
+            <a href="#">Account</a>
+         </li>
+         
+      </ul>
+
+      <button class="logout">Logout <i><img src="images/logout.png" width="16"></i></button>
+   </nav>
+
+   <nav class="boxcart">
+      <header class="title-boxcart">
+         <h2 class="title-cart mb-0">CART (2 ITEMS)</h2>
+         <div class="top-close">
+            <img src="images/close.png">
+         </div>
+      </header>
+
+      <div class="boxcart-inner">
+         <ul class="listing-cart">
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-01.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">Pillen Flower T-shirt</h2>
+                  <div class="price-cart">1,090.00 THB</div>
+                  <div class="sku">SKU : 455  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+
+            <li>
+               <div class="img-cart">
+                  <img src="images/cart-02.jpg" class="img-fluid">
+               </div>
+
+               <div class="detail-cart">
+                  <h2 class="title-cart">BFIG sweater</h2>
+                  <div class="price-cart">1,890.00 THB</div>
+                  <div class="sku">SKU : 451  SIZE : S</div>
+
+                  <div class="flex-amount">
+                     <div class="wrap-cart-spin">
+                        <input type="text" value="1" class="cart-spin" readonly>
+                     </div>
+
+                     <button type="button">
+                        <img src="images/remove-item.png">
+                     </button>
+                  </div>
+               </div> 
+            </li>
+         </ul>
+      </div>
+      
+      <div class="box-total">
+         <div class="flex-total mb-3">
+            <span>Total</span>
+            <span>2,980.00 THB</span>
+         </div>
+
+         <button class="btn-detail mb-3">CHECKOUT</button>
+         <button class="btn-detail btn-line">CONTINUE SHOPPING</button>
+      </div>
+   </nav>
+
+   <header class="header ">
+      <div class="container">
+         <button id="wsnavtoggle" class="wsanimated-arrow"><span></span></button>
+         
+      
+         <a class="logo"> 
+            <img src="images/logo.svg" class="img-fluid" /> 
+         </a>
+         <form class="form-search form-main">
+            <button type="button"><img src="images/search.svg"></button>
+            <input type="search" class="form-control" placeholder="SEARCH">
+         </form>
+
+         <div class="header-right">
+            <a class="sub-profile" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i><img src="images/flag-th.svg" class="me-2"></i> 
+               <span class="font-bold">THB</span> 
+               <i class="fa fa-angle-down"></i>
+            </a>
+
+            <ul class="dropdown-menu  dropdown-menu-end">
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flag-th.svg"></i> THB
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item" href="#">
+                     <i class="icon-profile"><img src="images/flag-en.svg"></i> USD
+                  </a>
+               </li>
+               
+            </ul>
+
+
+            <button class="icon-cart" id="icon-cart">
+               <img src="images/shopping-bag.svg">
+            </button>
+         </div>
+      </div>
+      
+   </header>
+
+   <main class="main main-pd"> 
+    
+      <!-- slideHero -->
+      <div class="slide-product swiper slide-arrow">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <img src="images/product-detail-01.jpg" width="100%">
+            </div>
+            <div class="swiper-slide">
+               <img src="images/product-detail-02.jpg" width="100%">
+            </div>
+            <div class="swiper-slide">
+               <img src="images/product-detail-03.jpg" width="100%">
+            </div>
+         </div>
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="container container-product text-uppercase">
+         <div class="title-product mb-40">
+            <div class="left-t-product">
+               <h2 class="size-23 font-bold mb-2">Pillen Flower T-shirt</h2>
+               <div class="size-18 color-gray">Shirts My happiness on the concrete</div>
+            </div>
+
+            <div class="right-t-product">
+               <div class="size-23 color-red font-bold mb-2">1,090.00 THB</div>
+               <del class="product-discount">1,590.00 THB</del>
+            </div>
+         </div>
+
+
+         <h2 class="font-normal size-18 mb-3">Select Size</h2>
+         <aside class="select-size mb-40">
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+         </aside>
+
+         <button class="font-normal size-18 size-guide-button" id="show-size-guide">SIZE GUIDE <i class="fa fa-angle-down"></i></button>
+
+         <div class="show-size-guide mt-3">
+            <aside class="size-tab mb-3">
+               <a href="#cm" class="active">Cm</a>
+               <a href="#inches">Inches</a>
+            </aside>
+
+            <div class="tab-size-guide" style="display: block;" id="cm">
+               <div class="table-responsive">
+                  <table class="mb-0 table table-size-guide table-borderless">
+                     <thead>
+                        <th width="100">Size</th>
+                        <th>CHEST</th>
+                        <th>LENGTH</th>
+                        <th>SLEEVE</th>
+                     </thead>
+
+                     <tbody>
+                        <tr>
+                           <th>s</th>
+                           <td>49.5 CM</td>
+                           <td>71.1 CM</td>
+                           <td>22.9 CM</td>
+                        </tr>
+
+                        <tr>
+                           <th>M</th>
+                           <td>54.6 CM</td>
+                           <td>73.7 CM</td>
+                           <td>24.1 CM</td>
+                        </tr>
+
+                        <tr>
+                           <th>L</th>
+                           <td>59.7CM</td>
+                           <td>76.2 CM</td>
+                           <td>25.4 CM</td>
+                        </tr>
+
+                        <tr>
+                           <th>XL</th>
+                           <td>64.8 CM</td>
+                           <td>76.2 CM</td>
+                           <td>26.7 CM</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+
+            <div class="tab-size-guide" id="inches">
+               <div class="table-responsive">
+                  <table class="mb-0 table table-size-guide table-borderless">
+                     <thead>
+                        <th width="100">Size</th>
+                        <th>CHEST</th>
+                        <th>LENGTH</th>
+                        <th>SLEEVE</th>
+                     </thead>
+
+                     <tbody>
+                        <tr>
+                           <th>s</th>
+                           <td>19.5 INCHES</td>
+                           <td>28 INCHES</td>
+                           <td>9 INCHES</td>
+                        </tr>
+
+                        <tr>
+                           <th>M</th>
+                           <td>21.5 INCHES</td>
+                           <td>29 INCHES</td>
+                           <td>9.5 INCHES</td>
+                        </tr>
+
+                        <tr>
+                           <th>L</th>
+                           <td>23.5 INCHES</td>
+                           <td>30 INCHES</td>
+                           <td>10 INCHES</td>
+                        </tr>
+
+                        <tr>
+                           <th>XL</th>
+                           <td>25.5 INCHES</td>
+                           <td>31 INCHES</td>
+                           <td>10.5 INCHES</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+
+         <button class="btn-detail mt-40 mb-40">ADD TO CART</button>
+
+         <article class="product-des size-18 text-uppercase">
+            <div class="color-gray mb-40">
+               <p>Weight : 200 Gram</p>
+               <p>SKU : 451</p>
+               <p class="mb-0">Description :</p>
+               <p class="mb-0">The Pillen Flower T-shirt is a beautiful black floral patterned t-shirt. The outstanding design with vibrant and fresh-colored flowers makes it eye-catching and stylish. The t-shirt is comfortable to wear and made from high-quality materials for durability and comfort. It is a versatile piece that can be styled with various outfits for different occasions. The Pillen Flower t-shirt is especially suitable for those who love floral patterns and want to add beauty to their wardrobe.</p>
+            </div>
+            <h2 class="size-23 font-bold mb-4">COLLECTIONS : My happiness on the concrete</h2>
+
+            <div class="slide-collection slide-arrow swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <figure>
+                        <a href="#" class="hover-img">
+                           <img src="images/colllection-01.jpg" width="100%">
+                        </a>
+                     </figure>
+                     <a href="#" class="size-18 cut-text-2 mb-2">BFIG sweater</a>
+                     <div class="color-red">1,890.00 THB</div>
+                  </div>
+
+                  <div class="swiper-slide">
+                     <figure>
+                        <a href="#" class="hover-img">
+                           <img src="images/collection-02.jpg" width="100%">
+                        </a>
+                     </figure>
+                     <a href="#" class="size-18 cut-text-2 mb-2">Paisley Skull T-shirt Oversize (VTG)</a>
+                     <div class="color-red">1,190.00 THB</div>
+                  </div>
+
+                  <div class="swiper-slide">
+                     <figure>
+                        <a href="#" class="hover-img">
+                           <img src="images/collection-03.jpg" width="100%">
+                        </a>
+                     </figure>
+                     <a href="#" class="size-18 cut-text-2 mb-2">Valentine T-shirt (white)</a>
+                     <div class="color-red">990.00 THB</div>
+                  </div>
+
+                  <div class="swiper-slide">
+                     <figure>
+                        <a href="#" class="hover-img">
+                           <img src="images/collection-04.jpg" width="100%">
+                        </a>
+                     </figure>
+                     <a href="#" class="size-18 cut-text-2 mb-2">SEP T-shirt VTG</a>
+                     <div class="color-red">790.00 THB</div>
+                  </div>
+               </div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+
+               
+            </div>
+         </article>
+      </div>
+
+
+      
+
+
+       
+   </main>
+
+<!-- end wrappermain -->
+</div>
+<!-- JS Files -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap-touchspin.min.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/plugin-slide.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+</body>
+</html>

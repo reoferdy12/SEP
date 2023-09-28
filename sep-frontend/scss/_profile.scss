@@ -1,0 +1,171 @@
+.profile-cat{
+	li{
+		margin-bottom: 4px;
+	}
+	a{
+		padding:8px 12px;
+		background:#fff;
+		display: block;
+		&:hover,&.active{
+			border-left:4px solid $color-ci;
+		}
+		
+	}
+}
+.icon-profile{
+	position: relative;
+	top: -2px;
+	margin-right: 4px;
+}
+.form-fix-w{
+	.form-group{
+		width: 100%;
+		max-width: 480px;
+	}
+}
+
+.pd-profile{
+	padding:30px 45px;
+	@media #{$max_lg} {
+		padding-left:15px;
+		padding-right:15px;
+	}
+}
+
+.form-main{
+	min-height: 400px;
+	@media #{$max_sm} {
+		min-height: auto;
+	}
+	.form-control{
+		height: 43px;
+		font-weight: 300;
+	}
+	.form-group{
+		margin-bottom: 20px;
+	}
+	.help-block{
+		color: #b72226;
+		position: absolute;
+		bottom: -32px;
+		left: 0px;
+		font-size: .8em;
+	}
+	.btn-sumbit{
+		margin-top: 30px;
+	}
+	.btn-detail{
+		width: 170px;
+		text-align: center;
+	}
+	.address-group{
+		margin-bottom: 25px;
+		border-bottom:1px solid #e1e1e1;
+		padding-bottom: 5px;
+		&.last-child{
+			margin-bottom: 0;
+			border-bottom:0;
+			padding-bottom: 0;
+		}
+	}
+
+	.add-address{
+		display: flex;
+		align-items:center;
+		margin-top: 20px;
+		padding-top:30px;
+		border-top:1px solid #e1e1e1;
+		i{
+			color: $color-ci;
+			margin-right: 5px;
+		}
+	}
+	.form-check{
+		
+	}
+}
+
+.g-pass:not(.not-as) {
+  position: absolute;
+  top: 12px;
+  right: 1rem;
+  z-index: 3;
+  font-size: 17px;
+  display: block;
+  text-align: center;
+  color: #ddd;
+  cursor: pointer;
+  pointer-events: all;
+}
+@media #{$max_sm} {
+	.button-2-col{
+		>*{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.show-icon-history{
+	>*{
+		margin: 0 10px;
+	}
+}
+.pageprint-auto{
+	width: 100%;
+	overflow: auto;
+}
+.pageprint {
+	width: 210mm;
+	min-height: 297mm;
+	padding: 15mm;
+	margin: 10mm auto;
+	border-radius: 5px;
+	background: white;
+	color: #000;
+	line-height: 20px;
+}
+.pageprint h1{
+     font-family: $font-main;
+     font-weight: 500;
+     color: #333439;
+     font-size: 27px;
+}
+.pageprint h2{
+    font-family: 'Arial';
+    font-size: 25px;
+    color: #333439;
+    font-weight: bold;
+}
+.pageprint .namecompany{float: left;}
+.pageprint .subheader{font-family: 'Arial'; font-size: 12px; }
+
+.subheader table td{vertical-align: top;}
+.subheader .col-8 .borderinner,
+.subheader .col-12 .borderinner, 
+.subheader .col-4 .borderinner
+{padding: 15px; border: 1px solid #000; border-radius: 10px;
+height: 130px; margin-top:5px;}
+.subheader .col-8{padding-right: 5px;}
+
+.detailorder{font-family: 'Arial'; font-size: 12px; margin-top: 5px;
+}
+.detailorder .small{display: block;}
+.detailorder th{text-align: center; vertical-align: top; height: 40px;}
+
+
+.pageprint .tables {border-right:1px solid #000; border-top:1px solid #000; border-bottom:1px solid #000;}
+.pageprint .tables > thead > tr > th{border-bottom:1px solid #000;}
+.pageprint .tables > thead > tr > th, .tables > tbody > tr > th, .tables > tfoot > tr > th, .tables > thead > tr > td, .tables > tbody > tr > td, .tables > tfoot > tr > td{border-left:1px solid #000; padding:5px 3px;}
+.pageprint .result{font-family: 'Arial'; font-size: 12px; }
+.pageprint .resultbath{border: 1px solid #000; padding: 5px;}
+
+.pageprint .result >.col-xs-7{padding-right: 5px;}
+.pageprint .resultdiscount{border: 1px solid #000; padding: 5px;}
+.pageprint .resultdiscount.resultall{font-weight: bold; margin-top: 5px;}
+
+.pageprint .pageindex{float: right; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; margin-bottom: 20px; }
+.pageprint .pageindex a{display: block; padding: 3px 12px; border-right:1px solid #ccc; float: left;}
+.pageprint .pageindex a:hover,.pageindex a.active{background: #ff6300; color: #fff;}
+
+.tag {display:block; margin:8px 0 0 2px; padding:2px 5px; background:red; color:#fff; position: absolute; left:5px; top:0px;}

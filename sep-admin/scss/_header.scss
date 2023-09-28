@@ -1,0 +1,139 @@
+.header{
+	z-index: 9;
+	width: 100%;
+	background: #fff;
+	position:fixed;
+	.logo{
+		width: 120px;
+		display: block;
+		margin-left: 10px;
+		img{
+			width: 70px;
+  			height: auto;
+		}
+	}
+	@include transition;
+	
+	.container-flex{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:0 25px;
+		height: 80px;
+		position: relative;
+		.right-header{
+			display: flex;
+			.alert-icon{
+				font-size: 20px;
+				position: relative;
+				padding: 0;
+				width: 20px;
+				&.has-alert{
+					.bi-bell-fill::before{
+						animation: ring 10s .5s ease-in-out infinite;
+						color: #000;
+					}
+				}
+				
+				.alert-new{
+					background:$color-red;
+					width: 9px;
+					height: 9px;
+					position:absolute;
+					right: -3px;
+					top: 1px;
+					border-radius: 100%;
+					border:1px solid #fff;
+				}
+			}
+			.user-top{
+				font-size: .95em;
+				color: #fff;
+				background-color: #000;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 3px 10px;
+				margin-left: 15px;
+			}
+			.logout-top{
+				color: #000;
+				font-size: .95em;
+				margin-left: 10px;
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+
+@keyframes ring {
+	0% { transform: rotate(0); }
+	1% { transform: rotate(30deg); }
+	3% { transform: rotate(-28deg); }
+	5% { transform: rotate(34deg); }
+	7% { transform: rotate(-32deg); }
+	9% { transform: rotate(30deg); }
+	11% { transform: rotate(-28deg); }
+	13% { transform: rotate(26deg); }
+	15% { transform: rotate(-24deg); }
+	17% { transform: rotate(22deg); }
+	19% { transform: rotate(-20deg); }
+	21% { transform: rotate(18deg); }
+	23% { transform: rotate(-16deg); }
+	25% { transform: rotate(14deg); }
+	27% { transform: rotate(-12deg); }
+	29% { transform: rotate(10deg); }
+	31% { transform: rotate(-8deg); }
+	33% { transform: rotate(6deg); }
+	35% { transform: rotate(-4deg); }
+	37% { transform: rotate(2deg); }
+	39% { transform: rotate(-1deg); }
+	41% { transform: rotate(1deg); }
+ 
+	43% { transform: rotate(0); }
+	100% { transform: rotate(0); }
+ }
+	
+
+.wsanimated-arrow{  
+	position: relative;
+	transition:all .4s ease-in-out;
+	cursor:pointer;
+	padding:19px 35px 19px 0;
+	display: none;
+	@media #{$max_lg} {
+		display: block;
+	}
+	
+	span,span:before,span:after{
+		cursor:pointer;
+		height:2px;
+		width:20px;
+		background:$color-ci;
+		position:absolute;
+		display:block;
+		content:'';
+		transition:all 500ms ease-in-out;
+	}
+	span{
+		&:before{
+			top:-7px;
+			width:26px
+		}
+		&:after{
+			bottom:-7px;
+			width:20px;
+		}
+	}
+	@media #{$max_md}{
+		padding-left: 0;
+			&:before{
+			display: none;
+		}
+	}
+}
+
+
+

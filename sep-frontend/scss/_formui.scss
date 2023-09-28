@@ -1,0 +1,65 @@
+.profile-form{
+	.form-group label{
+		font-family: $font-main;
+		padding-left: 25px;
+		margin-bottom: 7px;
+		color: #5f5f5f;
+		font-size: 20px;
+	}
+	.password-require {
+		background: #efefef;
+		border-radius: 10px;
+		padding: 20px;
+		display: inline-block;
+		ul{
+			list-style: disc;
+			margin-left: 25px;
+		}
+	}
+}
+
+.form-control{
+	border-radius: 25px;
+	font-size: 21px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 42px;
+	border:1px solid $color-ci;
+	&[type="search"]{
+		background:url(../images/magnifying-glass.svg) no-repeat 20px center #fff;
+		background-size:15px 15px;
+		padding-left:45px;
+	}
+	color: $color-ci;
+	font-family: $font-light;
+}
+
+select.form-control{
+	appearance:none;
+	background:url(../images/down-arrow.svg) no-repeat right 20px center #fff;
+	background-size:15px 15px;
+	padding-right: 50px;
+	option{
+		font-size: 14px;
+	}
+}
+
+.g-pass:not(.not-as) {
+    position: absolute;
+    top: 15px;
+    right: 1.5rem;
+    z-index: 3;
+    font-size: 17px;
+    display: block;
+    text-align: center;
+    color: #ddd;
+    cursor: pointer;
+    pointer-events: all;
+}
+.help-block{
+	color: $color-red;
+	position: absolute;
+   bottom: -37px;
+   left: 15px;
+   font-size: 17px;
+}
